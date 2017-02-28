@@ -9,6 +9,7 @@ public class FeatureCollectorPlugin implements Plugin<Project> {
     @Override
     public void apply(Project project) {
         project.getExtensions().create("featureTags",FeatureCollectorExtension.class);
-        project.getTasks().create("featureCollector",FeatureCollectorTask.class);
+        project.getTasks().create("featureCollector",FeatureCollectorTask.class).setGroup("optimus");
+        project.getTasks().create("runDistribution",RunDistributionTask.class).setGroup("optimus");
     }
 }

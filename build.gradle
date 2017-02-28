@@ -1,5 +1,5 @@
 group 'com.testvagrant.featureCollector'
-version '1.0.6'
+version '1.0.9'
 
 apply plugin: 'java'
 apply plugin: 'groovy'
@@ -12,6 +12,7 @@ dependencies {
     compile gradleApi()
     compile localGroovy()
     testCompile 'junit:junit:4.12'
+    testCompile gradleTestKit()
 }
 
 repositories {
