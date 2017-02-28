@@ -1,4 +1,4 @@
-package com.testvagrant;
+package com.testvagrant.gradle;
 
 
 import org.gradle.api.Project;

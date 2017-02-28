@@ -14,6 +14,8 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.*;
 
+import static com.testvagrant.utils.Commons.getTags;
+
 @CacheableTask
 public class FeatureCollectorTask extends DefaultTask{
 
@@ -58,17 +60,4 @@ public class FeatureCollectorTask extends DefaultTask{
     public void setRunnableFeaturesDirectory(File runnableFeaturesDirectory) {
         this.runnableFeaturesDirectory = runnableFeaturesDirectory;
     }
-
-    private List<String> getTags(String tags) {
-        if(!tags.contains(",")) {
-            List<String> tagsList = new ArrayList<>();
-            tagsList.add(tags);
-            return tagsList;
-        }
-        List<String> tagsList = Arrays.asList(tags.split(","));
-        tagsList.forEach(String::trim);
-        return tagsList;
-    }
-
-
 }

@@ -1,4 +1,4 @@
-package com.testvagrant;
+package com.testvagrant.gradle;
 
 
 import com.testvagrant.gradle.FeatureCollectorTask;
